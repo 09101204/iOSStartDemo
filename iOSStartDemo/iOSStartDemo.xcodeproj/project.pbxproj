@@ -10,12 +10,16 @@
 		50854B9D539735D3A835CF66 /* libPods-iOSStartDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 029A218FECEAE74FC7A11078 /* libPods-iOSStartDemo.a */; };
 		82FB30AC1C6E1F0C000510D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30AB1C6E1F0C000510D2 /* main.m */; };
 		82FB30AF1C6E1F0C000510D2 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30AE1C6E1F0C000510D2 /* STAppDelegate.m */; };
-		82FB30B21C6E1F0C000510D2 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30B11C6E1F0C000510D2 /* STMainViewController.m */; };
-		82FB30B51C6E1F0C000510D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FB30B31C6E1F0C000510D2 /* Main.storyboard */; };
 		82FB30B71C6E1F0C000510D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82FB30B61C6E1F0C000510D2 /* Assets.xcassets */; };
-		82FB30BA1C6E1F0C000510D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FB30B81C6E1F0C000510D2 /* LaunchScreen.storyboard */; };
 		82FB30C51C6E1F0C000510D2 /* iOSStartDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30C41C6E1F0C000510D2 /* iOSStartDemoTests.m */; };
 		82FB30D01C6E1F0C000510D2 /* iOSStartDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30CF1C6E1F0C000510D2 /* iOSStartDemoUITests.m */; };
+		82FB30F21C6F21CC000510D2 /* STMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30E71C6F21CC000510D2 /* STMainViewController.m */; };
+		82FB30F31C6F21CC000510D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FB30EA1C6F21CC000510D2 /* LaunchScreen.storyboard */; };
+		82FB30F41C6F21CC000510D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82FB30EC1C6F21CC000510D2 /* Main.storyboard */; };
+		82FB30FA1C6F2257000510D2 /* STDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30F91C6F2257000510D2 /* STDetailViewController.m */; };
+		82FB30FD1C6F226F000510D2 /* STExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30FC1C6F226F000510D2 /* STExploreViewController.m */; };
+		82FB31001C6F2280000510D2 /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30FF1C6F2280000510D2 /* STMeViewController.m */; };
+		82FB31031C6F2377000510D2 /* STCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB31021C6F2377000510D2 /* STCommonUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +47,7 @@
 		82FB30AB1C6E1F0C000510D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82FB30AD1C6E1F0C000510D2 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
 		82FB30AE1C6E1F0C000510D2 /* STAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STAppDelegate.m; sourceTree = "<group>"; };
-		82FB30B01C6E1F0C000510D2 /* STMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
-		82FB30B11C6E1F0C000510D2 /* STMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
-		82FB30B41C6E1F0C000510D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82FB30B61C6E1F0C000510D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		82FB30B91C6E1F0C000510D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82FB30BB1C6E1F0C000510D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82FB30C01C6E1F0C000510D2 /* iOSStartDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSStartDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FB30C41C6E1F0C000510D2 /* iOSStartDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSStartDemoTests.m; sourceTree = "<group>"; };
@@ -55,6 +55,18 @@
 		82FB30CB1C6E1F0C000510D2 /* iOSStartDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSStartDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FB30CF1C6E1F0C000510D2 /* iOSStartDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSStartDemoUITests.m; sourceTree = "<group>"; };
 		82FB30D11C6E1F0C000510D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82FB30E61C6F21CC000510D2 /* STMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMainViewController.h; sourceTree = "<group>"; };
+		82FB30E71C6F21CC000510D2 /* STMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMainViewController.m; sourceTree = "<group>"; };
+		82FB30EB1C6F21CC000510D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82FB30ED1C6F21CC000510D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		82FB30F81C6F2257000510D2 /* STDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDetailViewController.h; sourceTree = "<group>"; };
+		82FB30F91C6F2257000510D2 /* STDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDetailViewController.m; sourceTree = "<group>"; };
+		82FB30FB1C6F226F000510D2 /* STExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STExploreViewController.h; sourceTree = "<group>"; };
+		82FB30FC1C6F226F000510D2 /* STExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STExploreViewController.m; sourceTree = "<group>"; };
+		82FB30FE1C6F2280000510D2 /* STMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMeViewController.h; sourceTree = "<group>"; };
+		82FB30FF1C6F2280000510D2 /* STMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMeViewController.m; sourceTree = "<group>"; };
+		82FB31011C6F2377000510D2 /* STCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCommonUtil.h; sourceTree = "<group>"; };
+		82FB31021C6F2377000510D2 /* STCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCommonUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +139,11 @@
 			children = (
 				82FB30AD1C6E1F0C000510D2 /* STAppDelegate.h */,
 				82FB30AE1C6E1F0C000510D2 /* STAppDelegate.m */,
-				82FB30B01C6E1F0C000510D2 /* STMainViewController.h */,
-				82FB30B11C6E1F0C000510D2 /* STMainViewController.m */,
-				82FB30B31C6E1F0C000510D2 /* Main.storyboard */,
+				82FB30DD1C6F21B3000510D2 /* Utility */,
+				82FB30DE1C6F21C2000510D2 /* Common */,
+				82FB30DF1C6F21CC000510D2 /* Feature */,
+				82FB30F51C6F21D6000510D2 /* Resource */,
 				82FB30B61C6E1F0C000510D2 /* Assets.xcassets */,
-				82FB30B81C6E1F0C000510D2 /* LaunchScreen.storyboard */,
-				82FB30BB1C6E1F0C000510D2 /* Info.plist */,
 				82FB30AA1C6E1F0C000510D2 /* Supporting Files */,
 			);
 			path = iOSStartDemo;
@@ -141,6 +152,7 @@
 		82FB30AA1C6E1F0C000510D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				82FB30BB1C6E1F0C000510D2 /* Info.plist */,
 				82FB30AB1C6E1F0C000510D2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -162,6 +174,158 @@
 				82FB30D11C6E1F0C000510D2 /* Info.plist */,
 			);
 			path = iOSStartDemoUITests;
+			sourceTree = "<group>";
+		};
+		82FB30DD1C6F21B3000510D2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		82FB30DE1C6F21C2000510D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				82FB31011C6F2377000510D2 /* STCommonUtil.h */,
+				82FB31021C6F2377000510D2 /* STCommonUtil.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		82FB30DF1C6F21CC000510D2 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30E41C6F21CC000510D2 /* Main */,
+				82FB30E01C6F21CC000510D2 /* Explore */,
+				82FB30EE1C6F21CC000510D2 /* Me */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		82FB30E01C6F21CC000510D2 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30E21C6F21CC000510D2 /* Model */,
+				82FB30E31C6F21CC000510D2 /* View */,
+				82FB30E11C6F21CC000510D2 /* Controller */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		82FB30E11C6F21CC000510D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30FB1C6F226F000510D2 /* STExploreViewController.h */,
+				82FB30FC1C6F226F000510D2 /* STExploreViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82FB30E21C6F21CC000510D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82FB30E31C6F21CC000510D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82FB30E41C6F21CC000510D2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30E81C6F21CC000510D2 /* Model */,
+				82FB30E91C6F21CC000510D2 /* View */,
+				82FB30E51C6F21CC000510D2 /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		82FB30E51C6F21CC000510D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30E61C6F21CC000510D2 /* STMainViewController.h */,
+				82FB30E71C6F21CC000510D2 /* STMainViewController.m */,
+				82FB30F81C6F2257000510D2 /* STDetailViewController.h */,
+				82FB30F91C6F2257000510D2 /* STDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82FB30E81C6F21CC000510D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82FB30E91C6F21CC000510D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30EA1C6F21CC000510D2 /* LaunchScreen.storyboard */,
+				82FB30EC1C6F21CC000510D2 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82FB30EE1C6F21CC000510D2 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30F01C6F21CC000510D2 /* Model */,
+				82FB30F11C6F21CC000510D2 /* View */,
+				82FB30EF1C6F21CC000510D2 /* Controller */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		82FB30EF1C6F21CC000510D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30FE1C6F2280000510D2 /* STMeViewController.h */,
+				82FB30FF1C6F2280000510D2 /* STMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		82FB30F01C6F21CC000510D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82FB30F11C6F21CC000510D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82FB30F51C6F21D6000510D2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				82FB30F61C6F21D6000510D2 /* Image */,
+				82FB30F71C6F21D6000510D2 /* Sound */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		82FB30F61C6F21D6000510D2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		82FB30F71C6F21D6000510D2 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +434,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82FB30BA1C6E1F0C000510D2 /* LaunchScreen.storyboard in Resources */,
+				82FB30F41C6F21CC000510D2 /* Main.storyboard in Resources */,
 				82FB30B71C6E1F0C000510D2 /* Assets.xcassets in Resources */,
-				82FB30B51C6E1F0C000510D2 /* Main.storyboard in Resources */,
+				82FB30F31C6F21CC000510D2 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +509,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82FB30B21C6E1F0C000510D2 /* STMainViewController.m in Sources */,
+				82FB30FA1C6F2257000510D2 /* STDetailViewController.m in Sources */,
 				82FB30AF1C6E1F0C000510D2 /* STAppDelegate.m in Sources */,
+				82FB30FD1C6F226F000510D2 /* STExploreViewController.m in Sources */,
+				82FB31031C6F2377000510D2 /* STCommonUtil.m in Sources */,
+				82FB30F21C6F21CC000510D2 /* STMainViewController.m in Sources */,
 				82FB30AC1C6E1F0C000510D2 /* main.m in Sources */,
+				82FB31001C6F2280000510D2 /* STMeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,20 +551,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		82FB30B31C6E1F0C000510D2 /* Main.storyboard */ = {
+		82FB30EA1C6F21CC000510D2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				82FB30B41C6E1F0C000510D2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		82FB30B81C6E1F0C000510D2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82FB30B91C6E1F0C000510D2 /* Base */,
+				82FB30EB1C6F21CC000510D2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		82FB30EC1C6F21CC000510D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82FB30ED1C6F21CC000510D2 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

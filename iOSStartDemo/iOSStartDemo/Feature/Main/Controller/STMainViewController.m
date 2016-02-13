@@ -9,6 +9,7 @@
 #import "STMainViewController.h"
 #import <Masonry/Masonry.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "STDetailViewController.h"
 
 @interface STMainViewController ()
 
@@ -28,6 +29,15 @@
 
 #pragma mark - Setup
 - (void)setupUI {
+    // Use full screen layout.
+    self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    
+    // Navigation item.
+    UIBarButtonItem *detailBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Detail" style:UIBarButtonItemStylePlain target:self action:@selector(goToDetailPage)];
+    self.navigationItem.rightBarButtonItem = detailBarButton;
+    
     // Hello button.
     UIButton *helloButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [helloButton setTitle:@"Hello" forState:UIControlStateNormal];
@@ -40,6 +50,12 @@
     }];
 }
 
+#pragma mark - Navigation
+- (void)goToDetailPage {
+    STDetailViewController *detailViewController = [[STDetailViewController alloc] init];
+    detailViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
 
 #pragma mark - Action
 - (void)onHelloButtonClicked:(id)sender {
