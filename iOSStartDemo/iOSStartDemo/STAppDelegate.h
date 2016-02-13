@@ -1,14 +1,14 @@
 //
-//  AppDelegate.h
+//  STAppDelegate.h
 //  iOSStartDemo
 //
-//  Created by qiufu on 2/12/16.
+//  Created by SamirChen on 2/12/16.
 //  Copyright © 2016 CX. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface STAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

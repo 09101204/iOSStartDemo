@@ -2,7 +2,7 @@
 //  iOSStartDemoUITests.m
 //  iOSStartDemoUITests
 //
-//  Created by qiufu on 2/12/16.
+//  Created by SamirChen on 2/12/16.
 //  Copyright © 2016 CX. All rights reserved.
 //
 

@@ -2,15 +2,15 @@
 //  main.m
 //  iOSStartDemo
 //
-//  Created by qiufu on 2/12/16.
+//  Created by SamirChen on 2/12/16.
 //  Copyright © 2016 CX. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import "STAppDelegate.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([STAppDelegate class]));
     }
 }
