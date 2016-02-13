@@ -13,8 +13,7 @@
 NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 
 @interface STExploreViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *myTableView;
-
+@property (strong, nonatomic) UITableView *myTableView;
 @end
 
 @implementation STExploreViewController
