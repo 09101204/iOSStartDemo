@@ -8,6 +8,7 @@
 
 #import "STExploreViewController.h"
 #import "STCommonUtil.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "STMovieWebService.h"
@@ -40,10 +41,6 @@ static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
     
     // Setup.
     [self setupUI];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     // Load data.
     [self requestData];
@@ -67,12 +64,13 @@ static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 - (void)requestData {
     NSDictionary *parameters = @{@"pageLimit" : @30, @"pageNum" : @1};
     [STMovieWebService requestMovieDataWithParameters:parameters start:^{
-        
+        [SVProgressHUD show];
     } success:^(NSDictionary *result) {
         self.movieList = [result objectForKey:@"movieList"];
         [self.myTableView reloadData];
+        [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
-        
+        [SVProgressHUD dismiss];
     }];
 }
 
