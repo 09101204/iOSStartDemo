@@ -30,24 +30,24 @@
     //// Main.
     STMainViewController *mainViewController = [[STMainViewController alloc] init];
     mainViewController.title = @"Main";
-    tabImage = [[STCommonUtil imageWithColor:[UIColor redColor] size:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    tabImageHighlight = [[STCommonUtil imageWithColor:[UIColor grayColor] size:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    tabImage = [[UIImage imageNamed:@"TabBar_Main"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    tabImageHighlight = [[UIImage imageNamed:@"TabBar_Main_HL"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     mainViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:mainViewController.title image:tabImage selectedImage:tabImageHighlight];
     UINavigationController *mainNavigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
     
     //// Explore.
     STExploreViewController *exploreViewController = [[STExploreViewController alloc] init];
     exploreViewController.title = @"Explore";
-    tabImage = [[STCommonUtil imageWithColor:[UIColor greenColor] size:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    tabImageHighlight = [[STCommonUtil imageWithColor:[UIColor grayColor] size:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    tabImage = [[UIImage imageNamed:@"TabBar_Explore"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    tabImageHighlight = [[UIImage imageNamed:@"TabBar_Explore_HL"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     exploreViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:exploreViewController.title image:tabImage selectedImage:tabImageHighlight];
     UINavigationController *exploreNavigationController = [[UINavigationController alloc] initWithRootViewController:exploreViewController];
     
     //// Me.
     STMeViewController *meViewController = [[STMeViewController alloc] init];
     meViewController.title = @"Me";
-    tabImage = [[STCommonUtil imageWithColor:[UIColor blueColor] size:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    tabImageHighlight = [[STCommonUtil imageWithColor:[UIColor grayColor] size:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    tabImage = [[UIImage imageNamed:@"TabBar_Me"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    tabImageHighlight = [[UIImage imageNamed:@"TabBar_Me_HL"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:meViewController.title image:tabImage selectedImage:tabImageHighlight];
     UINavigationController *meNavigationController = [[UINavigationController alloc] initWithRootViewController:meViewController];
     

@@ -9,11 +9,16 @@
 #import "STExploreViewController.h"
 #import "STCommonUtil.h"
 #import <Masonry/Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "STMovieWebService.h"
 
-NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
+static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 
 @interface STExploreViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (strong, nonatomic) UITableView *myTableView;
+@property (strong, nonatomic) NSArray *movieList;
+
 @end
 
 @implementation STExploreViewController
@@ -22,7 +27,6 @@ NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 - (UITableView *)myTableView {
     if (!_myTableView) {
         _myTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        [_myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:STExploreCellIdentifier];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
     }
@@ -38,22 +42,38 @@ NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
     [self setupUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // Load data.
+    [self requestData];
+}
+
 #pragma mark - Setup
 - (void)setupUI {
-    
     // Use full screen layout.
     self.edgesForExtendedLayout = UIRectEdgeAll;
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.extendedLayoutIncludesOpaqueBars = YES;
-    
     
     // myTableView.
     [self.view addSubview:self.myTableView];
     [self.myTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    
-    
+}
+
+#pragma mark - Utility
+- (void)requestData {
+    NSDictionary *parameters = @{@"pageLimit" : @30, @"pageNum" : @1};
+    [STMovieWebService requestMovieDataWithParameters:parameters start:^{
+        
+    } success:^(NSDictionary *result) {
+        self.movieList = [result objectForKey:@"movieList"];
+        [self.myTableView reloadData];
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 #pragma mark - UITableViewDelegate
@@ -62,7 +82,7 @@ NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 50;
 }
 
 #pragma mark - UITableViewDataSource
@@ -71,17 +91,28 @@ NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Header";
+    return @"Movies";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1000;
+    return self.movieList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:STExploreCellIdentifier forIndexPath:indexPath];
-    cell.textLabel.text = @"Hi";
-    cell.imageView.image = [STCommonUtil imageWithColor:[UIColor redColor] size:CGSizeMake(30, 30)];
+    if (indexPath.row >= self.movieList.count) {
+        return nil;
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:STExploreCellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:STExploreCellIdentifier];
+    }
+    
+    STMovie *movie = [self.movieList objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", movie.name, movie.year];
+    cell.detailTextLabel.text = movie.synopsis;
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:movie.thumbnailImageURLString] placeholderImage:[STCommonUtil imageWithColor:[UIColor grayColor] size:CGSizeMake(27, 40)] completed:nil];
     cell.layer.shouldRasterize = YES;
     cell.layer.rasterizationScale = [[UIScreen mainScreen] scale];
     

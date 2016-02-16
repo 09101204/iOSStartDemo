@@ -20,6 +20,8 @@
 		82FB30FD1C6F226F000510D2 /* STExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30FC1C6F226F000510D2 /* STExploreViewController.m */; };
 		82FB31001C6F2280000510D2 /* STMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30FF1C6F2280000510D2 /* STMeViewController.m */; };
 		82FB31031C6F2377000510D2 /* STCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB31021C6F2377000510D2 /* STCommonUtil.m */; };
+		82FB31171C701E7D000510D2 /* STMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB31131C701E7D000510D2 /* STMovie.m */; };
+		82FB311A1C701ECF000510D2 /* STMovieWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB31191C701ECF000510D2 /* STMovieWebService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		82FB30FF1C6F2280000510D2 /* STMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMeViewController.m; sourceTree = "<group>"; };
 		82FB31011C6F2377000510D2 /* STCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCommonUtil.h; sourceTree = "<group>"; };
 		82FB31021C6F2377000510D2 /* STCommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCommonUtil.m; sourceTree = "<group>"; };
+		82FB31121C701E7D000510D2 /* STMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMovie.h; sourceTree = "<group>"; };
+		82FB31131C701E7D000510D2 /* STMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMovie.m; sourceTree = "<group>"; };
+		82FB31181C701ECF000510D2 /* STMovieWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMovieWebService.h; sourceTree = "<group>"; };
+		82FB31191C701ECF000510D2 /* STMovieWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMovieWebService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +230,8 @@
 		82FB30E21C6F21CC000510D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				82FB31111C701E7D000510D2 /* Entity */,
+				82FB31141C701E7D000510D2 /* Service */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +334,40 @@
 			children = (
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		82FB31111C701E7D000510D2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				82FB31121C701E7D000510D2 /* STMovie.h */,
+				82FB31131C701E7D000510D2 /* STMovie.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		82FB31141C701E7D000510D2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				82FB31151C701E7D000510D2 /* LocalService */,
+				82FB31161C701E7D000510D2 /* WebService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		82FB31151C701E7D000510D2 /* LocalService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalService;
+			sourceTree = "<group>";
+		};
+		82FB31161C701E7D000510D2 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				82FB31181C701ECF000510D2 /* STMovieWebService.h */,
+				82FB31191C701ECF000510D2 /* STMovieWebService.m */,
+			);
+			path = WebService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,7 +554,9 @@
 				82FB30FA1C6F2257000510D2 /* STDetailViewController.m in Sources */,
 				82FB30AF1C6E1F0C000510D2 /* STAppDelegate.m in Sources */,
 				82FB30FD1C6F226F000510D2 /* STExploreViewController.m in Sources */,
+				82FB31171C701E7D000510D2 /* STMovie.m in Sources */,
 				82FB31031C6F2377000510D2 /* STCommonUtil.m in Sources */,
+				82FB311A1C701ECF000510D2 /* STMovieWebService.m in Sources */,
 				82FB30F21C6F21CC000510D2 /* STMainViewController.m in Sources */,
 				82FB30AC1C6E1F0C000510D2 /* main.m in Sources */,
 				82FB31001C6F2280000510D2 /* STMeViewController.m in Sources */,
