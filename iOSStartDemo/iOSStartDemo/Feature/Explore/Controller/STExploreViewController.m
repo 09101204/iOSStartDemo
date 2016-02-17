@@ -76,9 +76,13 @@ static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
         [SVProgressHUD show];
     } success:^(NSDictionary *result) {
         NSArray *newMovieList = [result objectForKey:@"movieList"];
+
+        // Update local db data.
         for (STMovie *movie in newMovieList) {
             [STMovieLocalService addOrUpdateMovie:movie];
         }
+        
+        // Update displayed data.
         self.movieList = newMovieList;
         [self.myTableView reloadData];
         [SVProgressHUD dismiss];
