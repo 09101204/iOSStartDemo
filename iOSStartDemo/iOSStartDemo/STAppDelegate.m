@@ -11,6 +11,7 @@
 #import "STExploreViewController.h"
 #import "STMeViewController.h"
 #import "STCommonUtil.h"
+#import "STDBManager.h"
 
 @interface STAppDelegate ()
 
@@ -22,6 +23,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // Override point for customization after application launch.
+    
+    // Setup local db.
+    [[STDBManager sharedInstance] setupDB];
     
     // Init.
     UIImage *tabImage = nil;

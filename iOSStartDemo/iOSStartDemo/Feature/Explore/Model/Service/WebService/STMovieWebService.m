@@ -55,6 +55,7 @@ static NSString * const STRequestMovieDataURL = @"http://api.rottentomatoes.com/
         STMovie *movie = [[STMovie alloc] init];
 
         NSDictionary *movieData = movieDataList[i];
+        movie.rowid = [[movieData objectForKey:@"id"] longLongValue];
         movie.name = [movieData objectForKey:@"title"];
         movie.year = [movieData objectForKey:@"year"];
         movie.synopsis = [movieData objectForKey:@"synopsis"];

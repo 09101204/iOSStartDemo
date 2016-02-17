@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		50854B9D539735D3A835CF66 /* libPods-iOSStartDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 029A218FECEAE74FC7A11078 /* libPods-iOSStartDemo.a */; };
+		822F8DF61C730344001D40C3 /* STMovieLocalService.m in Sources */ = {isa = PBXBuildFile; fileRef = 822F8DF51C730344001D40C3 /* STMovieLocalService.m */; };
+		822F8DF91C731B62001D40C3 /* STDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 822F8DF81C731B62001D40C3 /* STDBManager.m */; };
 		82FB30AC1C6E1F0C000510D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30AB1C6E1F0C000510D2 /* main.m */; };
 		82FB30AF1C6E1F0C000510D2 /* STAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FB30AE1C6E1F0C000510D2 /* STAppDelegate.m */; };
 		82FB30B71C6E1F0C000510D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82FB30B61C6E1F0C000510D2 /* Assets.xcassets */; };
@@ -45,6 +47,10 @@
 		029A218FECEAE74FC7A11078 /* libPods-iOSStartDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSStartDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28B4A6AF093FDC0998F3CA /* Pods-iOSStartDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSStartDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSStartDemo/Pods-iOSStartDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4259E466DE42B616015641D4 /* Pods-iOSStartDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSStartDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSStartDemo/Pods-iOSStartDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		822F8DF41C730344001D40C3 /* STMovieLocalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STMovieLocalService.h; sourceTree = "<group>"; };
+		822F8DF51C730344001D40C3 /* STMovieLocalService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STMovieLocalService.m; sourceTree = "<group>"; };
+		822F8DF71C731B62001D40C3 /* STDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDBManager.h; sourceTree = "<group>"; };
+		822F8DF81C731B62001D40C3 /* STDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDBManager.m; sourceTree = "<group>"; };
 		82FB30A71C6E1F0C000510D2 /* iOSStartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSStartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FB30AB1C6E1F0C000510D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82FB30AD1C6E1F0C000510D2 /* STAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STAppDelegate.h; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 			children = (
 				82FB31011C6F2377000510D2 /* STCommonUtil.h */,
 				82FB31021C6F2377000510D2 /* STCommonUtil.m */,
+				822F8DF71C731B62001D40C3 /* STDBManager.h */,
+				822F8DF81C731B62001D40C3 /* STDBManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -357,6 +365,8 @@
 		82FB31151C701E7D000510D2 /* LocalService */ = {
 			isa = PBXGroup;
 			children = (
+				822F8DF41C730344001D40C3 /* STMovieLocalService.h */,
+				822F8DF51C730344001D40C3 /* STMovieLocalService.m */,
 			);
 			path = LocalService;
 			sourceTree = "<group>";
@@ -551,9 +561,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822F8DF91C731B62001D40C3 /* STDBManager.m in Sources */,
 				82FB30FA1C6F2257000510D2 /* STDetailViewController.m in Sources */,
 				82FB30AF1C6E1F0C000510D2 /* STAppDelegate.m in Sources */,
 				82FB30FD1C6F226F000510D2 /* STExploreViewController.m in Sources */,
+				822F8DF61C730344001D40C3 /* STMovieLocalService.m in Sources */,
 				82FB31171C701E7D000510D2 /* STMovie.m in Sources */,
 				82FB31031C6F2377000510D2 /* STCommonUtil.m in Sources */,
 				82FB311A1C701ECF000510D2 /* STMovieWebService.m in Sources */,

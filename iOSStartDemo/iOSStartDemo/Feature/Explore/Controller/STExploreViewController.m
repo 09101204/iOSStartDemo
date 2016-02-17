@@ -12,6 +12,8 @@
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "STMovieWebService.h"
+#import "STDBManager.h"
+#import "STMovieLocalService.h"
 
 static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 
@@ -62,11 +64,22 @@ static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 
 #pragma mark - Utility
 - (void)requestData {
+    // Load data from local db.
+    self.movieList = [STMovieLocalService getAllMovies];
+    if (self.movieList.count > 0) {
+        [self.myTableView reloadData];
+    }
+    
+    // Load new data from server and update local db data.
     NSDictionary *parameters = @{@"pageLimit" : @30, @"pageNum" : @1};
     [STMovieWebService requestMovieDataWithParameters:parameters start:^{
         [SVProgressHUD show];
     } success:^(NSDictionary *result) {
-        self.movieList = [result objectForKey:@"movieList"];
+        NSArray *newMovieList = [result objectForKey:@"movieList"];
+        for (STMovie *movie in newMovieList) {
+            [STMovieLocalService addOrUpdateMovie:movie];
+        }
+        self.movieList = newMovieList;
         [self.myTableView reloadData];
         [SVProgressHUD dismiss];
     } failure:^(NSError *error) {
