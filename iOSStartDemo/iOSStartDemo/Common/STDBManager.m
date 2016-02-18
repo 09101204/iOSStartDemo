@@ -44,8 +44,8 @@ static NSString * const STDBFileName = @"stdb.sqlite";
 #pragma mark - Utility
 - (void)setupDB {
     if (![self isDBFileExist]) {
-        BOOL isCopyDBOK = [self copyDBFileFromMainBundle];
-        if (!isCopyDBOK) {
+        BOOL isSuccess = [self copyDBFileFromMainBundle];
+        if (!isSuccess) {
             if ([self createDB]) {
                 [self updateDB];
             }
@@ -60,14 +60,14 @@ static NSString * const STDBFileName = @"stdb.sqlite";
 - (BOOL)copyDBFileFromMainBundle {
     BOOL result = NO;
     
-    // Could not find db file, need to copy.
-    NSString* backupDbPath = [[NSBundle mainBundle] pathForResource:@"stdb" ofType:@"sqlite"];
-    if (backupDbPath == nil) {
-        // Could not find backup db to copy.
+    // Not find db file, need to copy backup db file.
+    NSString *backupDBPath = [[NSBundle mainBundle] pathForResource:@"stdb" ofType:@"sqlite"];
+    if (!backupDBPath) {
+        // Not find backup db file.
         result = NO;
     } else {
-        BOOL copiedBackupDb = [[NSFileManager defaultManager] copyItemAtPath:backupDbPath toPath:self.dbFilePath error:nil];
-        if (!copiedBackupDb) {
+        BOOL isSuccess = [[NSFileManager defaultManager] copyItemAtPath:backupDBPath toPath:self.dbFilePath error:nil];
+        if (!isSuccess) {
             // Copy backup db file failed.
             result = NO;
         } else {

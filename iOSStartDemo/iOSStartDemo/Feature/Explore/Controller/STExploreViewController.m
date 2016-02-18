@@ -78,6 +78,7 @@ static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
         NSArray *newMovieList = [result objectForKey:@"movieList"];
 
         // Update local db data.
+        [STMovieLocalService removeAllMovies];
         for (STMovie *movie in newMovieList) {
             [STMovieLocalService addOrUpdateMovie:movie];
         }
