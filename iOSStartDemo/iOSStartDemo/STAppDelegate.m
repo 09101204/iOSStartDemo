@@ -55,7 +55,7 @@
     meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:meViewController.title image:tabImage selectedImage:tabImageHighlight];
     UINavigationController *meNavigationController = [[UINavigationController alloc] initWithRootViewController:meViewController];
     
-    //// Main Tab bar controller.
+    //// Main tab bar controller.
     UITabBarController *mainTabBarController = [[UITabBarController alloc] init];
     mainTabBarController.viewControllers = @[mainNavigationController, exploreNavigationController, meNavigationController];
     
