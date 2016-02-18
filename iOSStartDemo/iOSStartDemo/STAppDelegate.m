@@ -23,10 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // Override point for customization after application launch.
-    
-    // Setup local db.
-    [[STDBManager sharedInstance] setupDB];
-    
+        
     // Init.
     UIImage *tabImage = nil;
     UIImage *tabImageHighlight = nil;

@@ -42,6 +42,7 @@ static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
     [super viewDidLoad];
     
     // Setup.
+    [[STDBManager sharedInstance] setupDB];
     [self setupUI];
     
     // Load data.
