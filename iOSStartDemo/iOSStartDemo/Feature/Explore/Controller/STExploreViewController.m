@@ -40,20 +40,16 @@ NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
 
 #pragma mark - Setup
 - (void)setupUI {
-    
     // Use full screen layout.
     self.edgesForExtendedLayout = UIRectEdgeAll;
     self.automaticallyAdjustsScrollViewInsets = YES;
     self.extendedLayoutIncludesOpaqueBars = YES;
-    
     
     // myTableView.
     [self.view addSubview:self.myTableView];
     [self.myTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    
-    
 }
 
 #pragma mark - UITableViewDelegate
