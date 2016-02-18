@@ -43,13 +43,17 @@ static NSString * const STDBFileName = @"stdb.sqlite";
 
 #pragma mark - Utility
 - (void)setupDB {
-    if (![self isDBFileExist]) {
-        BOOL isSuccess = [self copyDBFileFromMainBundle];
-        if (!isSuccess) {
-            if ([self createDB]) {
-                [self updateDB];
-            }
-        }
+    if ([self isDBFileExist]) {
+        return;
+    }
+    
+    BOOL isSuccess = [self copyDBFileFromMainBundle];
+    if (isSuccess) {
+        return;
+    }
+    
+    if ([self createDB]) {
+        [self updateDB];
     }
 }
 
