@@ -79,7 +79,7 @@ NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
     cell.textLabel.text = @"Hi";
     cell.imageView.image = [STCommonUtil imageWithColor:[UIColor redColor] size:CGSizeMake(30, 30)];
     cell.layer.shouldRasterize = YES;
-    cell.layer.rasterizationScale = [[UIScreen mainScreen] scale];
+    cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
     
     return cell;
 }
