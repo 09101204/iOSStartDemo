@@ -131,7 +131,7 @@ static NSString * const STExploreCellIdentifier = @"STExploreCellIdentifier";
     cell.detailTextLabel.text = movie.synopsis;
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:movie.thumbnailImageURLString] placeholderImage:[STCommonUtil imageWithColor:[UIColor grayColor] size:CGSizeMake(27, 40)] completed:nil];
     cell.layer.shouldRasterize = YES;
-    cell.layer.rasterizationScale = [[UIScreen mainScreen] scale];
+    cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
     
     return cell;
 }
