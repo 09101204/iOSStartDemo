@@ -15,7 +15,6 @@ static NSString * const STRequestMovieDataURL = @"http://api.rottentomatoes.com/
 
 #pragma mark - Movie Data WebService
 + (void)requestMovieDataWithParameters:(id)parameters start:(void (^)(void))start success:(void (^)(NSDictionary *result))success failure:(void (^)(NSError *error))failure {
-    start();
     // Start.
     start();
     
